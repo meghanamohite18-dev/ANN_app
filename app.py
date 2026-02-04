@@ -36,7 +36,7 @@ LL = st.number_input("Liquid Limit, LL (%)", 0.0, 100.0, 45.0)
 e = st.number_input("Void Ratio, e", 0.0, 2.0, 0.8)
 gamma = st.number_input("Soil Unit Weight, γ (kN/m³)", 0.0, 30.0, 18.0)
 Q = st.number_input("Load on Pile, Q (kN)", 0.0, 2000.0, 500.0)
-B = st.number_input("Pile Cap Width, B (m)", 0.0, 10.0, 3.0)
+B = st.number_input("Pile Cap/Group Width, B (m)", 0.0, 10.0, 3.0)
 
 # --------------------------------------------------
 # Prediction
@@ -87,3 +87,4 @@ st.caption(
     "Allowable settlement as per IS 2911, IS 8009 (Part 1), "
     "Bowles (Foundation Analysis & Design) and Braja M. Das."
 )
+
