@@ -1,4 +1,25 @@
 import streamlit as st
+
+PASSWORD = "App.py"   # change your password here
+
+def check_password():
+    if "password_correct" not in st.session_state:
+        st.session_state.password_correct = False
+
+    if not st.session_state.password_correct:
+        pwd = st.text_input("Enter Code", type="password")
+
+        if pwd == PASSWORD:
+            st.session_state.password_correct = True
+        else:
+            st.warning("Incorrect Password")
+
+    return st.session_state.password_correct
+
+if not check_password():
+    st.stop()
+
+import streamlit as st
 import pandas as pd
 import joblib
 from tensorflow.keras.models import load_model
@@ -87,4 +108,5 @@ st.caption(
     "Allowable settlement as per IS 2911, IS 8009 (Part 1), "
     "Bowles (Foundation Analysis & Design) and Braja M. Das."
 )
+
 
